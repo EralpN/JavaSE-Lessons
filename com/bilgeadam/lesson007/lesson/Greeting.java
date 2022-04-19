@@ -1,4 +1,4 @@
-package com.bilgeadam.lesson007;
+package com.bilgeadam.lesson007.lesson;
 
 public class Greeting
 {

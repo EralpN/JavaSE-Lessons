@@ -1,4 +1,4 @@
-package com.bilgeadam.practice007;
+package com.bilgeadam.lesson007.practice;
 
 import javax.swing.JOptionPane;
 
