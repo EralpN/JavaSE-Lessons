@@ -1,4 +1,4 @@
-package com.bilgeadam.lesson007.lesson;
+package com.bilgeadam.lesson007;
 
 public class GreetingObject
 {

@@ -4,11 +4,10 @@ public class ArithmeticOperations
 {
 	public static void main(String[] args)
 	{
-		ArithmeticOperationsX sayıX = new ArithmeticOperationsX();
-		ArithmeticOperationsY sayıY = new ArithmeticOperationsY();
+		ArithmeticOperationsScanner getNumber = new ArithmeticOperationsScanner();
 
-		double x = sayıX.numberX();
-		double y = sayıY.numberY();
+		double x = getNumber.number();
+		double y = getNumber.number();
 
 		double sum, diff, multi, div, mod;
 
