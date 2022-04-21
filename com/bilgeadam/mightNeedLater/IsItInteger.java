@@ -7,35 +7,38 @@ public class IsItInteger
 
 	public static void main(String[] args)
 	{
-		System.out.print("Please enter a number: ");
 
-		try (Scanner scan = new Scanner(System.in))
+		int number = 0;
+
+		Scanner ask = new Scanner(System.in);
+
+		System.out.print("Please enter a positive integer: ");
+
+		while (ask.hasNext())
 		{
-			while (scan.hasNext())
+
+			if (ask.hasNextInt())
 			{
-				int number;
-				if (scan.hasNextInt())
-				{
-					number = scan.nextInt();
-				}
-				else
-				{
-					System.out.print("Please enter a valid number: ");
-					scan.next();
-					continue;
-				}
-
-				if (number < 0)
-				{
-					System.out.print("Please enter a number > 0: ");
-					continue;
-				}
-
-				// At this stage, the number is an integer >= 0
-				System.out.println("User entered: " + number);
-				break;
+				number = ask.nextInt();
 			}
+			else
+			{
+				System.out.print("Input must be integer: ");
+				ask.next();
+				continue;
+			}
+			if (number < 0)
+			{
+				System.out.print("Input must be positive: ");
+				continue;
+			}
+			// At this stage, the number is a positive integer
+			break;
 		}
+
+		ask.close();
+		System.out.println("User entered: " + number);
+
 	}
 
 }

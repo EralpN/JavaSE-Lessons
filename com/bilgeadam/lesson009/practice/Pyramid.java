@@ -6,33 +6,43 @@ public class Pyramid
 {
 	public static void main(String[] args)
 	{
-		int symbolUp = 0, symbolDown, lineUp, lineDown, side = 0;
+		int symbolUp, symbolDown, lineUp, lineDown, side = 0;
 
 		Scanner ask = new Scanner(System.in);
 
 		System.out.print("Length of edge: ");
 
+
+
 		while (ask.hasNext())
 		{
+			
+//			do
+//			{
+//				System.out.println("Enter a value: ");
+//				ask.next();
+//			}
+//			while (ask.nextLine().isEmpty());
+
 			if (ask.hasNextInt())
 			{
-				int sideTemp;
-				sideTemp = ask.nextInt();
-				side = sideTemp;
+				side = ask.nextInt();
 			}
 			else
 			{
-				System.out.print("Length of edge must be a positive integer: ");
+				System.out.print("Length of edge must be an integer: ");
 				ask.next();
 				continue;
 			}
 			if (side < 0)
 			{
-				System.out.print("Length of edge must be a positive integer: ");
+				System.out.print("Length of edge must be a positive: ");
 				continue;
 			}
+			
 			break;
 		}
+
 
 		ask.close();
 		
