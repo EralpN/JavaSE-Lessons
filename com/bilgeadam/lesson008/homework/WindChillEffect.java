@@ -32,7 +32,7 @@ public class WindChillEffect
 		tempC = ask.nextDouble();
 		}
 		while (!(tempC >= -50 && tempC <= 10));
-		tempF = (tempC + 1.8) + 32;
+		tempF = (tempC * 1.8) + 32;
 		
 		ask.close();
 		
