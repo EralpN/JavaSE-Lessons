@@ -9,17 +9,34 @@ public class LetterGrade
 	{
 		Scanner askGrade = new Scanner(System.in);
 		
-		double grade;
+		double grade, midterm1, midterm2, finalExam;
 		String letterGrade;
 		
 		do
 		{
-			System.out.print("Exam grade out of 100: ");
-			grade = askGrade.nextDouble();
+			System.out.print("First midterm grade out of 100: ");
+			midterm1 = askGrade.nextDouble();
 		}
-		while (grade < 0 || grade > 100);
+		while (midterm1 < 0 || midterm1 > 100);
+		
+		do
+		{
+			System.out.print("Second midterm grade out of 100: ");
+			midterm2 = askGrade.nextDouble();
+		}
+		while (midterm2 < 0 || midterm2 > 100);
+		
+		do
+		{
+			System.out.print("Final exam grade out of 100: ");
+			finalExam = askGrade.nextDouble();
+		}
+		while (finalExam < 0 || finalExam > 100);
 		
 		askGrade.close();
+		
+		grade = (0.2 * midterm1) + (0.2 * midterm2) + (0.6 * finalExam);
+		
 		
 		switch((grade < 50) ? "0:49" : (grade < 60) ? "50:59" : (grade < 70) ? "60:69" : (grade < 80) ? "70:79" : "80:100")
 		{

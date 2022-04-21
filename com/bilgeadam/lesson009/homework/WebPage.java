@@ -1,4 +1,4 @@
-package com.bilgeadam.lesson009.practice;
+package com.bilgeadam.lesson009.homework;
 
 public class WebPage
 {
