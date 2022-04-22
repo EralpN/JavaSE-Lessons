@@ -19,21 +19,28 @@ public static void main(String[] args)
 	order = ask.nextInt();
 	if (order == 1)
 	{
-		System.out.print("Your Fibonacci number: 0");
+		System.out.print("0\nYour Fibonacci number: 0");
+		System.exit(0);
+	}
+	if (order == 2)
+	{
+		System.out.print("0 1\nYour Fibonacci number: 1");
 		System.exit(0);
 	}
 	} 
 	while (!(order > 2 && order < 48));
 	
-	
 	ask.close();
+	
+	System.out.print("0 1 ");
 	
 	for(i = 1; i != order - 1; i++)
 	{
 		temp = current;
 		current = current + prev;
 		prev = temp;
+		System.out.print(current + " ");
 	}
-	System.out.print("Your Fibonacci number: " + current);
+	System.out.print("\nYour Fibonacci number: " + current);
 }
 }

@@ -17,6 +17,7 @@ public class DetectBlank
 		
 		String empty = ask.nextLine();
 		
+		
 		while (empty.trim().equals(""))
 		{
 			System.out.print("Enter something: ");
