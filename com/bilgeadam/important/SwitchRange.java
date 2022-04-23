@@ -1,4 +1,4 @@
-package com.bilgeadam.mightNeedLater;
+package com.bilgeadam.important;
 
 import java.util.Scanner;
 
