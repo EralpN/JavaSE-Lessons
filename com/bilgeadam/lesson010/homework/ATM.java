@@ -10,7 +10,10 @@ public class ATM
 	{
 		System.out.println("Card has been inserted please enter your account info.");
 
-		String username = "user", password = "123", usernameTemp, passwordTemp;
+		String username = "user"; 
+		String password = "123"; 
+		String usernameTemp; 
+		String passwordTemp;
 
 		Scanner ask = new Scanner(System.in);
 
@@ -19,7 +22,7 @@ public class ATM
 
 		while (!usernameTemp.equals(username))
 		{
-			System.out.print("No Such User Please Enter Again: ");
+			System.out.print("User does not match the inserted card. \nPlease Enter Again: ");
 			usernameTemp = ask.next();
 		}
 
@@ -46,7 +49,8 @@ public class ATM
 		{
 			Scanner menu = new Scanner(System.in);
 			System.out.println("What would you like to do? (1/2/3)" + "\nBalance: " + balance + "\n1: Deposit \n2: Withraw \n3: Exit");
-			int option = 3, attempt;
+			int option = 3;
+			int attempt;
 
 			while (menu.hasNext())
 			{
