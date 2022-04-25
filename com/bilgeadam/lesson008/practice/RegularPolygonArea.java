@@ -6,7 +6,9 @@ public class RegularPolygonArea
 {
 	public static void main(String[] args)
 	{
-		double edgeNumber, edgeLength, area;
+		double edgeNumber;
+		double edgeLength;
+		double area;
 
 		Scanner ask = new Scanner(System.in);
 

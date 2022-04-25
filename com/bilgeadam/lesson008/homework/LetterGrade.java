@@ -9,7 +9,11 @@ public class LetterGrade
 	{
 		Scanner askGrade = new Scanner(System.in);
 		
-		double grade, midterm1, midterm2, finalExam;
+		double grade;
+		double midterm1;
+		double midterm2;
+		double finalExam;
+		
 		String letterGrade;
 		
 		do

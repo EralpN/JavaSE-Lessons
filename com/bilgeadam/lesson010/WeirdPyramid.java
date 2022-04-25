@@ -12,7 +12,7 @@ public class WeirdPyramid
 		System.out.print("Enter pyramid height: ");
 		height = ask.nextInt();
 		ask.close();
-		
+
 		for (int i = 0; i < height; i++)
 		{
 			for (int j = 0; j <= i; j++)
@@ -26,8 +26,8 @@ public class WeirdPyramid
 					System.out.print("*");
 				}
 			}
-		System.out.print("\n");
-		}	
+			System.out.print("\n");
+		}
 	}
 
 }

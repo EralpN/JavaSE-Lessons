@@ -6,8 +6,12 @@ public class BodyMassIndex
 {
 	public static void main(String[] args)
 	{
-		String sex, condition = "";
-		double bodyMassIndex, length, weight;
+		String sex;
+		String condition = "";
+		
+		double bodyMassIndex;
+		double length;
+		double weight;
 
 		Scanner ask = new Scanner(System.in);
 

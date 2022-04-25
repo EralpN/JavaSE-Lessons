@@ -45,8 +45,7 @@ public class ATM
 		while (true)
 		{
 			Scanner menu = new Scanner(System.in);
-			System.out.println(
-					"What would you like to do? (1/2/3)" + "\nBalance: " + balance + "\n1: Deposit \n2: Withraw \n3: Exit");
+			System.out.println("What would you like to do? (1/2/3)" + "\nBalance: " + balance + "\n1: Deposit \n2: Withraw \n3: Exit");
 			int option = 3, attempt;
 
 			while (menu.hasNext())

@@ -6,7 +6,9 @@ public class IfAlternative
 {
 	public static void main(String[] args)
 	{
-		int a, b;
+		int a;
+		int b;
+		
 		Scanner getNumber = new Scanner(System.in);
 
 		System.out.print("First Number: ");

@@ -7,7 +7,14 @@ public class TriangleMissingEdge
 
 	public static void main(String[] args)
 	{
-		double edgeA, edgeB, edgeC, degreeA, degreeB, degreeC, degreeRadC;
+		double edgeA;
+		double edgeB;
+		double edgeC;
+		double degreeA;
+		double degreeB;
+		double degreeC;
+		double degreeRadC;
+		
 		Scanner ask = new Scanner(System.in);
 
 		System.out.print("Edge A: ");

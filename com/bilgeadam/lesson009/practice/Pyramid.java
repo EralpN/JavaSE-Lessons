@@ -6,7 +6,11 @@ public class Pyramid
 {
 	public static void main(String[] args)
 	{
-		int symbolUp, symbolDown, lineUp, lineDown, side = 0;
+		int symbolUp;
+		int symbolDown;
+		int lineUp;
+		int lineDown;
+		int side = 0;
 
 		Scanner ask = new Scanner(System.in);
 

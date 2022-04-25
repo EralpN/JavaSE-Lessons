@@ -9,10 +9,10 @@ public class Zodiac
 	{
 
 		Scanner ask = new Scanner(System.in);
-		int month, day;
+		int month;
+		int day;
 		String zodiac = "";
 
-		
 		do
 		{
 			System.out.print("Month of birth (1:12): ");
@@ -29,8 +29,6 @@ public class Zodiac
 
 		ask.close();
 
-		
-		
 		if ((month == 12 && day >= 22) || (month == 1 && day <= 21))
 		{
 			zodiac = "Capricorn";

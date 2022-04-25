@@ -7,7 +7,8 @@ public class HesapMakinesiSwitch
 public static void main(String[] args)
 {
 	String operation = "";
-	double firstNumber, secondNumber;
+	double firstNumber;
+	double secondNumber;
 	double result = 0;
 	
 	Scanner ask = new Scanner(System.in);

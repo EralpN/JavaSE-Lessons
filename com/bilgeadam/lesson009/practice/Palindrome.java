@@ -9,8 +9,12 @@ public class Palindrome
 	{
 		System.out.println("Is your word a Palindrome?");
 		
-		String word, wordP;
-		int length, mid, i;
+		String word;
+		String wordP;
+		
+		int length;
+		int mid;
+		int i;
 		
 		Scanner ask = new Scanner(System.in);
 		

@@ -7,7 +7,12 @@ public class PriceProfitTax
 
 	public static void main(String[] args)
 	{
-		double endPrice, priceWithoutVAT, rawPrice, VAT, profit;
+		double endPrice;
+		double priceWithoutVAT;
+		double rawPrice;
+		double VAT;
+		double profit;
+		
 		Scanner ask = new Scanner(System.in);
 
 		System.out.print("Sales price of the product: ");

@@ -14,7 +14,12 @@ public class WindChillEffect
 	{
 		Scanner ask = new Scanner(System.in);
 		
-		double speedMPH, speedKmH, tempC, tempF, windChillTempC, windChillTempF;
+		double speedMPH;
+		double speedKmH;
+		double tempC;
+		double tempF;
+		double windChillTempC;
+		double windChillTempF;
 		
 		System.out.println("Winds need to be above 4.8 km/hr and below 177 km/hr \nTemperatures need to be above -50°C and at or below 10°C");
 		

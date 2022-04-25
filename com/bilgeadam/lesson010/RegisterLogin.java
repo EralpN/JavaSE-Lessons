@@ -8,10 +8,17 @@ public class RegisterLogin
 	public static void main(String[] args)
 	{
 
-		String adminUsername = "admin", adminPassword = "admin";
-		String username = adminUsername, password = adminPassword;
-		String askUsername, tempPassword, askPassword;
-		int yesNo = 0, yesNo2 = 0, yesNo3 = 0;
+		String adminUsername = "admin";
+		String adminPassword = "admin";
+		String username = adminUsername;
+		String password = adminPassword;
+		String askUsername;
+		String tempPassword;
+		String askPassword;
+
+		int yesNo = 0;
+		int yesNo2 = 0;
+		int yesNo3 = 0;
 
 		Scanner yn = new Scanner(System.in);
 		Scanner usr = new Scanner(System.in);
@@ -98,7 +105,7 @@ public class RegisterLogin
 					yesNo3 = 0;
 					continue;
 				}
-				
+
 				else
 				{
 					yesNo3 = 0;
@@ -108,7 +115,6 @@ public class RegisterLogin
 			}
 
 		}
-
 
 	}
 
