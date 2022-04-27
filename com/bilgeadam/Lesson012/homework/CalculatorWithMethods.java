@@ -1,4 +1,4 @@
-package com.bilgeadam.Lesson012.homework;
+package com.bilgeadam.lesson012.homework;
 
 import java.util.Scanner;
 
