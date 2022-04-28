@@ -51,7 +51,7 @@ public class ATMwithMethods
 	
 // This line is where the methods start. This is done to keep main method clean.
 	
-	public static void login()
+	private static void login()
 	{
 		System.out.println("Card has been inserted please enter your account info.");
 
@@ -89,7 +89,7 @@ public class ATMwithMethods
 	
 	
 	
-	public static int menuKey()
+	private static int menuKey()
 	{
 		
 		System.out.println("\nWhat would you like to do? (1/2/3)" + "\nBalance: " + balance + "\n1: Deposit \n2: Withraw \n3: Exit");
@@ -123,7 +123,7 @@ public class ATMwithMethods
 	
 	
 	
-	public static void withraw()
+	private static void withraw()
 	{
 		int attempt;
 		
@@ -153,7 +153,7 @@ public class ATMwithMethods
 	
 	
 	
-	public static void deposit()
+	private static void deposit()
 	{
 		int attempt;
 		
@@ -176,7 +176,7 @@ public class ATMwithMethods
 	
 	
 	
-	public static void exit()
+	private static void exit()
 	{
 		menuAsk.close();
 		withrawAsk.close();
