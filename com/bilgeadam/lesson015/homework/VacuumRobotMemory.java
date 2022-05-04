@@ -114,6 +114,11 @@ public class VacuumRobotMemory
 	{
 		for (int i = 0; i <= 1; i++)
 		{
+			if (this.batteryLevelPercentage <= 0)
+			{
+				System.err.println("Battery empty! Probably faulty. Please contact manufacturer!");
+				System.exit(0);
+			}
 			System.out.println("Returning to dock...");
 			useBattery();
 			time();
@@ -138,6 +143,11 @@ public class VacuumRobotMemory
 
 			for (int i = 0; i <= (3 * cleaningDurationInHours); i++)
 			{
+				if (this.batteryLevelPercentage <= 0)
+				{
+					System.err.println("Battery empty! Probably faulty. Please contact manufacturer!");
+					System.exit(0);
+				}
 				System.out.println("Exploring please do not interfere!");
 				useBattery();
 				time();
