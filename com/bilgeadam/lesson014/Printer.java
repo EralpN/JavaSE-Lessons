@@ -1,5 +1,9 @@
 package com.bilgeadam.lesson014;
 
+
+//incomplete!
+//does not work properly in some cases.
+
 public class Printer
 {
 	private static final double CRITICAL_TONER_LEVEL = 0.10d;

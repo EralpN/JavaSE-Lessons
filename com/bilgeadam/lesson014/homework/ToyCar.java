@@ -137,13 +137,13 @@ public class ToyCar
 		}
 		else
 		{
-		this.batteryLevel = this.batteryLevel + (this.batteryCapacity * 0.1);
-		System.out.println("Battery charged by 10%!" + "\t\tBattery: " + percentageBatteryLevel(this.batteryLevel) + "%");
+		this.batteryLevel = this.batteryLevel + (this.batteryCapacity * 0.3);
 		if (this.batteryLevel >= this.batteryCapacity)
 		{
 			this.batteryLevel = this.batteryCapacity;
 			System.out.println("Battery Full!");
 		}
+		System.out.println("Battery charged by 30%!" + "\t\tBattery: " + percentageBatteryLevel(this.batteryLevel) + "%");
 		}
 	}
 	
@@ -224,7 +224,7 @@ public class ToyCar
 	
 	private void powerOff()
 	{
-		System.out.println("Powering Off!");
+		System.err.println("Power Off!");
 		System.exit(0);
 	}
 	

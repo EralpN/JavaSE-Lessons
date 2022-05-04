@@ -2,6 +2,10 @@ package com.bilgeadam.lesson014;
 
 import java.util.Scanner;
 
+
+// incomplete!
+// does not work properly in some cases.
+
 public class PrinterManager
 {
 	private Printer printer;
