@@ -1,4 +1,4 @@
-package com.bilgeadam.esson012;
+package com.bilgeadam.lesson012;
 
 public class FactorialRunTime
 {
