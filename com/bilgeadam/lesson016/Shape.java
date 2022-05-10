@@ -12,8 +12,7 @@ class Shape
 	
 	public void readInput()
 	{
-		exit:
-		while (true)
+		while (!exit)
 		{
 		edge1 = 0;
 		edge2 = 0;
@@ -30,8 +29,6 @@ class Shape
 			System.out.println("Perimeter: " + perimeter());
 			System.out.println("Area: " + area());	
 			break;
-		case "exit":
-			break exit;
 		default:
 			break;
 		}
@@ -84,24 +81,25 @@ class Shape
 	
 	private void askUserEdges()
 	{
-		end:
 		for (int i = 1; i <= 4; i++)
 		{
-			@SuppressWarnings("resource")
 			Scanner ask = new Scanner(System.in);
 			System.out.print("Enter edge " + i + ": ");
-			int value = ask.nextInt();
+			double value = ask.nextDouble();
 			
+			
+			boolean end = false;
 			switch ((value < 0) ? "exit" : (value == 0) ? "end" : "valid")
 			{
 			case "exit":
 				System.err.println("Closing...");
 				ask.close();
 				exit = true;
-				break end;
+				break;
 				
 			case "end":
-				break end;
+				end = true;
+				break;
 				
 			case "valid":
 				if (i == 1)
@@ -123,6 +121,11 @@ class Shape
 				continue;
 				
 			default:
+				break;
+			}
+			
+			if (exit || end)
+			{
 				break;
 			}
 		}
