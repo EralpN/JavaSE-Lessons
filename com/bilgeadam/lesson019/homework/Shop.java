@@ -6,6 +6,7 @@ import com.bilgeadam.lesson019.homework.products.ProductType;
 import com.bilgeadam.lesson019.homework.products.animalproducts.AnimalSource;
 import com.bilgeadam.lesson019.homework.products.animalproducts.Milk;
 import com.bilgeadam.lesson019.homework.products.cleaningproducts.Detergent;
+import com.bilgeadam.lesson019.homework.products.herbalproducts.Potato;
 
 public class Shop
 {
@@ -36,5 +37,16 @@ public class Shop
 		detergent.sell(200);
 		detergent.sell(1000);
 		
+		System.out.println();
+		System.out.println();
+		
+		Potato potato = new Potato(ProductType.HERBAL_PRODUCT, LocalDateTime.of(2022, 4, 15, 0, 0), 5, 300);
+		System.out.println(potato.productType.getName());
+		System.out.println("Time spent on shelf: " + potato.timeOnShelf);
+		System.out.println("Price: " + potato.price);
+		System.out.println("Initial Stock: " + potato.numberInStock);
+		milk.isRotten();
+		milk.sell(30);
+		milk.sell(200);
 	}
 }
