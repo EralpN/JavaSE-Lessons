@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Knight
 {
-	static boolean exit = false;
+	private static boolean exit = false;
+	private static String knightCharacter = "🐴";
+	private static String moveCharacter = "⚔";
 
 	public static void main(String[] args)
 	{
-		String knightCharacter = "🐴";
-		String moveCharacter = "⚔";
 		String knight;
 
 		String[][] chessBoard = new String[8][8];
@@ -18,13 +18,13 @@ public class Knight
 
 		Knight chessGame = new Knight();
 
-		knight = chessGame.askKnight();
-
+		
+		knight = chessGame.initiateKnight();
 		while (!exit)
 		{
 			chessBoard = chessGame.initiateChessBoard();
-			canMoveTo = chessGame.placeKnight(knight, chessBoard, knightCharacter, moveCharacter);
-			chessGame.printChessBoard(chessBoard, knightCharacter, moveCharacter);
+			canMoveTo = chessGame.placeKnight(knight, chessBoard);
+			chessGame.printChessBoard(chessBoard);
 			knight = chessGame.moveKnight(canMoveTo);
 			Arrays.fill(canMoveTo, null);
 		}
@@ -36,16 +36,17 @@ public class Knight
 	
 	
 	
-	private String askKnight()
+	private String initiateKnight()
 	{
 		Scanner ask = new Scanner(System.in);
-		System.out.println("Where is the knight? (a1 to h8) (type exit to terminate)");
+		System.out.print("Where is the knight? (a1 to h8) (type exit to terminate): ");
 		String knight = ask.nextLine();
 		if (knight.equals("exit"))
 		{
 			exit = true;
 			ask.close();
 		}
+		System.out.println();
 		return knight;
 	}
 
@@ -69,7 +70,7 @@ public class Knight
 		return chessBoard;
 	}
 
-	private String[] placeKnight(String knight, String[][] chessBoard, String knightCharacter, String moveCharacter)
+	private String[] placeKnight(String knight, String[][] chessBoard)
 	{
 		String[] canMoveTo = new String[8];
 		int numCanMoveTo = 0;
@@ -143,7 +144,7 @@ public class Knight
 		return canMoveTo;
 	}
 
-	private void printChessBoard(String[][] chessBoard, String knightCharacter, String moveCharacter)
+	private void printChessBoard(String[][] chessBoard)
 	{
 		for (int column = 7; column >= 0; column--)
 		{
@@ -182,7 +183,7 @@ public class Knight
 
 		do
 		{
-			System.out.println("What is knights next move? (type exit to terminate)");
+			System.out.print("What is knights next move? (type exit to terminate): ");
 			knight = ask.nextLine();
 
 			if (knight.equals("exit"))
@@ -201,6 +202,7 @@ public class Knight
 					}
 				}
 			}
+			System.out.println();
 		}
 		while (invalidInput);
 		return knight;
