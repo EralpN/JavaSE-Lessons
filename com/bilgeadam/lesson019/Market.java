@@ -12,8 +12,11 @@ public class Market
 
 	public static void main (String[] args)
 	{
-		Person customer = new Customer("Ahmet", LocalDate.now(), "Patates");
-		System.out.println(customer);
+		Person customer1 = new Customer("Ahmet", LocalDate.now(), "Patates");
+		System.out.println(customer1);
+		
+		Person customer2 = new Customer("Mehmet", LocalDate.now(), "Patates");
+		System.out.println(customer2);
 		
 		Person employee = new Employee("Mehmet", LocalDate.now(), 5000, LocalDate.now(), EmployeePosition.CASHIER);
 		System.out.println(employee);

@@ -154,7 +154,7 @@ public class KnightLists
 		boolean invalidInput = true;
 		Scanner ask = new Scanner(System.in);
 
-		System.out.print("Knight can move to");
+		System.out.print("Knight can move to ");
 		System.out.print(canMoveTo);
 		System.out.println("!");
 		
