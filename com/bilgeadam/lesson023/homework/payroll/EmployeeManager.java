@@ -199,7 +199,7 @@ public class EmployeeManager
 			// ascending sort
 			public int compare(Employee first, Employee second)
 			{
-				return first.getName().compareTo(second.getName());
+				return first.getName().compareToIgnoreCase(second.getName());
 			}
 		});
 	}
@@ -210,7 +210,7 @@ public class EmployeeManager
 		{
 			public int compare(Employee first, Employee second)
 			{
-				return first.getiD().compareTo(second.getiD());
+				return first.getiD().compareToIgnoreCase(second.getiD());
 			}
 		});
 	}
@@ -232,7 +232,7 @@ public class EmployeeManager
 		{
 			public int compare(Payroll first, Payroll second)
 			{
-				return first.getEmployee().getName().compareTo(second.getEmployee().getName());
+				return first.getEmployee().getName().compareToIgnoreCase(second.getEmployee().getName());
 			}
 		});
 	}
@@ -243,7 +243,7 @@ public class EmployeeManager
 		{
 			public int compare(Payroll first, Payroll second)
 			{
-				return first.getEmployee().getiD().compareTo(second.getEmployee().getiD());
+				return first.getEmployee().getiD().compareToIgnoreCase(second.getEmployee().getiD());
 			}
 		});
 	}

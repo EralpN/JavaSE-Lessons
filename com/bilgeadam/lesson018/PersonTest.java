@@ -1,4 +1,4 @@
-package com.bilgeadam.lesson018.practice;
+package com.bilgeadam.lesson018;
 
 public class PersonTest
 {

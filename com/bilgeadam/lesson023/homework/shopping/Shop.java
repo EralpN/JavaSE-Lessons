@@ -46,7 +46,7 @@ public class Shop
 		System.out.println("Welcome to my shop, what would you like to do?");
 		System.out.println("1 - View shopping cart");
 		System.out.println("2 - Add product to cart");
-		System.out.println("3 - Remove last product from cart");
+		System.out.println("3 - Remove product from cart");
 		System.out.println("4 - Checkout (exit)");
 		int selection;
 		do
@@ -63,7 +63,7 @@ public class Shop
 		{
 			for (Products product : cart)
 			{
-				System.out.println(product.getProduct() + "\tX" + product.getAmount() + "\t\tPrice: " + product.getTotalPrice());
+				System.out.println(product.getProduct() + "\tX" + product.getAmount() + "\t\t" + product.getTotalPrice() + " tl");
 			}
 		}
 		else
@@ -184,10 +184,10 @@ public class Shop
 		{
 			for (Products product : cart)
 			{
-				System.out.println(product.getProduct() + "\tX" + product.getAmount() + "\t\tPrice: " + product.getTotalPrice());
+				System.out.println(product.getProduct() + "\tX" + product.getAmount() + "\t\t" + product.getTotalPrice() + " tl");
 				totalPrice += product.getTotalPrice();
 			}
-			System.out.println("Amount to be payed:\t\t" + totalPrice + " tl");
+			System.err.println("Amount to be payed:\t\t" + totalPrice + " tl");
 		}
 		else
 		{
