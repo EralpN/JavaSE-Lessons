@@ -65,7 +65,10 @@ public abstract class Employee extends Person
 	// Changes married status and changes last name
 	public void changeMarriedDivorced(String newLastName)
 	{
-		changeLastName(newLastName);
+		if (getGender().equals(Gender.FEMALE))
+		{
+			changeLastName(newLastName);
+		}
 		this.isMarried = !this.isMarried;
 	}
 	
