@@ -2,7 +2,7 @@ package com.bilgeadam.lesson035.factoryMethod;
 
 public class Factory
 {
-	public SuperClass getSuperClass(String type)
+	public static SuperClass getSuperClass(String type) throws NoClassException
 	{
 		if (type.equalsIgnoreCase("1"))
 		{
@@ -16,6 +16,6 @@ public class Factory
 		{
 			return new SubClass3();
 		}
-		return null;
+		throw new NoClassException("Class does not exist!");
 	}
 }
