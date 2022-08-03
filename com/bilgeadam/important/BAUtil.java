@@ -16,8 +16,8 @@ public class BAUtil {
 	private static Scanner scan = new Scanner(System.in);
 
 	public static void footer() {
-		System.out.println("\n\n\tProgramı kullandığınız için teşekkürler");
-		System.out.println("\t\tTekrar görüşmek üzere");
+		System.out.println("\n\n\tThank you for using the program.");
+		System.out.println("\t\tSee you again!");
 		closeResources();
 	}
 
@@ -26,7 +26,7 @@ public class BAUtil {
 		int     selection     = -1;
 		do {
 			if (!correctAnswer) {
-				System.err.println("\n\n\tLütfen doğru değer giriniz!\n\n");
+				System.err.println("\n\n\tPlease enter a valid value!\n\n");
 			}
 			showMenuItems(menuItems);
 			selection     = getUserSelection();
@@ -40,7 +40,7 @@ public class BAUtil {
 	}
 
 	private static int getUserSelection() {
-		return readInt("Lütfen seçiminizi yapınız");
+		return readInt("Please choose");
 	}
 
 //	private static void showMenuItems(TreeMap<Integer, String> menuItems) { // en doğru veri yapısı
@@ -113,7 +113,7 @@ public class BAUtil {
 		showQuery(start + " " + numElements + " " + query + "\n");
 		int[] retVal = new int[numElements];
 		for (int i = 0; i < numElements; i++) {
-			System.out.print((i + 1) + ". değeri giriniz: ");
+			System.out.print("Enter value " + (i + 1) + ": ");
 			retVal[i] = scan.nextInt();
 		}
 //		scan.nextLine();
@@ -130,7 +130,7 @@ public class BAUtil {
 				retry = false;
 			}
 			catch (InputMismatchException ex) {
-				System.out.println("Hatalı giriş!");
+				System.out.println("Wrong input!");
 				retry = true;
 			}
 			finally {
@@ -156,10 +156,9 @@ public class BAUtil {
 	}
 
 	/**
-	 * long şeklinde belirtilmiş bir zaman bilgisini dd.MMM.yyyy şeklinde geri döner
-	 * 
-	 * @param timestamp zaman bilgisi
-	 * @return
+	 * long returns as dd.MMM.yyyy
+	 * @param time as long
+	 * @return time as dd.MMM.yyyy
 	 */
 	public static String dateAsString(long timestamp) {
 		LocalDateTime dateTime = LocalDateTime.ofEpochSecond(timestamp, 0, ZoneOffset.UTC);
@@ -167,10 +166,9 @@ public class BAUtil {
 	}
 
 	/**
-	 * long şeklinde belirtilmiş bir zaman bilgisini HH:mm şeklinde geri döner
-	 * 
-	 * @param timestamp zaman bilgisi
-	 * @return
+	 * long returns as HH:mm
+	 * @param time as long
+	 * @return time as HH:mm
 	 */
 	public static String timeAsString(long timestamp) {
 		LocalDateTime dateTime = LocalDateTime.ofEpochSecond(timestamp, 0, ZoneOffset.UTC);

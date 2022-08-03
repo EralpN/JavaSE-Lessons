@@ -6,16 +6,12 @@ public abstract class SuperClassStr implements Createable
 {
 	String name;
 
+	@Override
 	public abstract void assignName();
 
+	@Override
 	public void presentName()
 	{
 		System.out.println(name);
-	}
-	
-	@Override
-	public String info()
-	{
-		return "Str";
 	}
 }

@@ -4,9 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.bilgeadam.lesson036.abstractFactoryMethod.num.SuperClassNum;
-import com.bilgeadam.lesson036.abstractFactoryMethod.str.SuperClassStr;
-
 public class Test
 {
 
@@ -24,21 +21,8 @@ public class Test
 		// decides on which sub class to create
 		Createable createdClass = createdFactory.create(subName); 
 		
-		SuperClassNum numClass;
-		SuperClassStr strClass;
-		
-		if (createdClass.info().equalsIgnoreCase("Num"))
-		{
-			numClass = (SuperClassNum)createdClass;
-			numClass.assignName();
-			numClass.presentName();
-		}
-		else
-		{
-			strClass = (SuperClassStr)createdClass;
-			strClass.assignName();
-			strClass.presentName();
-		}
+		createdClass.assignName();
+		createdClass.presentName();
 	}
 
 }
